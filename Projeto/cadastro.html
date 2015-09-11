@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastro de Projeto</title>
+	<meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="design.css"/>
+</head>
+<body>		
+			<legend>Dados do Projeto</legend>
+			<table border="1" cellspacing="0" cellpadding="2">				
+					<label>Nome do Projeto:<span class="red">*</span></label>
+					<input type="text" id="nome" name="nome"/>																 
+					<label>Equipe:</label>
+						<select name="Equipe">
+						<option value="Equipe1">Equipe 1</option>
+						<option value="Equipe2">Equipe 2</option>
+						<option value="Equipe3">Equipe 3</option>
+						<option value="outro">Outra</option>
+						</select>				
+						<label>Status:</label>
+						<select name="Status">
+						<option value="Ativo">Ativo</option>
+						<option value="Inativo">Inativo</option>						
+						</select>
+					<label>Workspace:<span class="red"></span></label><td>
+					<td><input type="text" id="nome" name="nome"/></td>												
+				<input type="file" value="Enviar arquivo"/> <sup class="aviso">
+			</table>
+			<input type="submit" value="Cadastrar"/> <sup class="aviso">
+			*campos obrigatórios</sup>		
+</body>
+</html>
