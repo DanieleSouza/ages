@@ -1,0 +1,32 @@
+body {
+	background-color: gray;
+	color: white;
+	font-family: Verdana, Segoe UI, Arial;
+	font-size: 12pt;
+}
+title{
+	font-size: 20pt;
+}
+
+legend{
+	font-style:italic;
+	font-size:16pt;		
+}
+input{
+	border: 1px solid #CCC;
+	margin: 5px;
+	height: 25px;		
+}
+select{
+	font-family:Verdana;
+	font-size: 12pt;
+	width: 300px;
+}
+input[type=text], input[type=password] {
+	width:300 px;	
+}
+label {
+	display: black;
+	margin: 5px;
+	padding: 1px;	
+}

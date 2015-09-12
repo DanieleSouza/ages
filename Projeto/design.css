@@ -1,1 +1,27 @@
-@CHARSET "ISO-8859-1";
+body {
+	background-color: black;
+	color: white;
+	font-family: Verdana, Segoe UI, Arial;
+	font-size: 14pt;
+}
+
+table {   	
+	background-color: white;
+}
+
+input{
+	border: 1px solid #CCC;
+	margin: 5px;
+	height: 25px;		
+}
+
+label {
+	padding: 25px;
+	position: absolute;
+	left: 40%;
+	top: 25%;
+	margin: 10px; 
+	width: 500px;
+	heigth: 500px;
+	background-color: white;
+}
