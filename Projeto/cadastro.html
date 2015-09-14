@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cadastro de Projeto</title>
-	<meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
+	<title>Projetos</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="spips.css"/>
 </head>
-<body>		
-			<legend>Dados do Projeto</legend>
-			<table border="1" cellspacing="0" cellpadding="2">				
-					<label>Nome do Projeto:<span class="red">*</span></label><br>
-					<input type="text" id="nome" name="nome"/>																 
-					<label>Equipe:</label>
-						<select name="Equipe">
+<body>
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"> <img alt="Logo AGES" src="LogoAGES.jpg"></a>
+		</div>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="equipes.html">EQUIPES</a></li>
+			<li><a href="cadastro.html">PROJETOS</a></li>
+			<li><a href="index.html">LOGOUT</a></li>
+		</ul>
+	</div>
+	<div class="corpo">
+		<h1>Cadastro de Projetos</h1>
+		<div class="cadastro">
+
+			<table>		
+				<tr>		
+					<td><label>Nome do Projeto<span class="campoObrigatorio"> *</span></label></td>
+					<td><input type="text" id="nome" name="nome"/></td>	
+				</tr>		
+				<tr>										 
+					<td><label>Equipe</label></td>
+					<td><select name="Equipe">
 						<option value="Equipe1">Equipe 1</option>
 						<option value="Equipe2">Equipe 2</option>
 						<option value="Equipe3">Equipe 3</option>
-						<option value="outro">Outra</option>
-						</select>				
-						<label>Status:</label>
-						<select name="Status">
-						<option value="Ativo">Ativo</option>
-						<option value="Inativo">Inativo</option>						
-						</select><br>
-					<label>Workspace:<span class="red"></span></label><td>
-					<td><input type="text" id="nome" name="nome"/></td>												
-				<input type="file" value="Enviar arquivo"/> <sup class="aviso">
+					</select></td>
+				</tr>
+				<tr>
+					<td><label>Status<span class="campoObrigatorio"> *</span></label></td>
+					<td><select name="Status">		
+						<option value="Inativo">Inativo</option>		
+						<option value="Inativo">Ativdo</option>		
+					</select></td>
+				</tr>
+				<tr>
+					<td><label>Workspace</label></td>
+					<td><input type="file" value="Enviar arquivo"/><sup class="aviso"></td>
+				</tr>
 			</table>
-			<input type="submit" value="Cadastrar"/> <sup class="aviso">
-			*campos obrigatórios</sup>		
+			<input class="botao" type="reset" value="Limpar"/>
+			<input class="botao" type="reset" value="Cadastrar"/>
+			<div class="campoObrigatorio" id="campoObrigatorio">
+				<p>* campos obrigatórios</p>
+			</div>		
+
+		</div>
+		<br>
+	</div>
+	<div class="footer">
+		<p>Copyright © AGES 2015 | All rights reserved</p>
+	</div>
 </body>
 </html>

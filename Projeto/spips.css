@@ -1,32 +1,138 @@
+@CHARSET "ISO-8859-1";
+
 body {
-	background-color: gray;
-	color: white;
+	background-color: white;
+	color: #545454;
+	font-weight: bold;
 	font-family: Verdana, Segoe UI, Arial;
 	font-size: 12pt;
 }
-title{
-	font-size: 20pt;
-}
 
-legend{
-	font-style:italic;
-	font-size:16pt;		
-}
-input{
-	border: 1px solid #CCC;
-	margin: 5px;
-	height: 25px;		
-}
-select{
-	font-family:Verdana;
-	font-size: 12pt;
+input {
+	border: 1px solid #545454;
+	height: 25px;
 	width: 300px;
 }
-input[type=text], input[type=password] {
-	width:300 px;	
+
+input[type=file] {
+	border: none;
 }
+
+select {
+	font-family: Verdana, Segoe UI, Arial;
+	font-size: 10pt;
+	height: 25px;
+	width: 300px;
+}
+
 label {
-	display: black;
-	margin: 5px;
-	padding: 1px;	
+	display: block;
+}
+
+td {
+	padding: 5px;
+}
+
+.corpo {
+	padding: 10px;
+	min-height: 650px;
+	clear: both;
+	background-color: #EE752C;
+}
+
+.corpo h1 {
+	color: white;
+	text-align: center;
+}
+
+.cadastro {
+	padding: 10px;
+	margin: 0 auto;
+    width: 50%;
+    min-width: 500px;
+  	text-align: center;
+	background-color: white;
+}
+
+.cadastro .recuperacaoSenha a {
+	font-size: 16px;
+	font-weight: bold;
+	color: #50558F;
+}
+
+.cadastro .recuperacaoSenha a:hover {
+	color: #EE752C;
+}
+
+table {
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px;
+}
+
+.botao {
+	border: 0;
+	height: 25px;
+	width: 150px;
+	font-size: 12pt;
+	font-weight: bold;
+	color: white;
+	background-color: #50558F;
+}
+
+.botao:hover{
+	color: white;
+	background-color: #EE752C;
+	cursor: pointer;
+}
+
+.campoObrigatorio {
+	font-size: 16px;
+	font-weight: bold;
+	color: #EE752C;
+}
+
+a {
+	color: #545454;
+}
+
+
+.footer {
+	padding: 5px;
+	text-align: center;
+	color: #545454;
+}
+
+.header {
+	font-family: Verdana, Segoe UI, Arial;
+	font-weight: bold;
+	min-height: 100px;
+}
+
+.header a {
+	text-decoration: none;
+}
+
+.header a:hover {
+	color: #EE752C;
+}
+
+.header .logo img {
+	width: 50%;
+}
+
+.header .logo {
+	float: left;
+}
+
+.header ul, head ol {
+	float: right;
+	list-style: none;
+}
+
+.header li {
+	padding-top: 50px;
+    padding-right: 5px;
+	float: left;
+	margin: 0px 7px;
 }
