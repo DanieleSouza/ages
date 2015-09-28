@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplo for e array</title>
+
+</head>
+<body>
+	<h1>Exemplo for e array</h1>
+	<script type="text/javascript">
+		var paisesArray = new Array(2);
+
+		paisesArray[0] = "Brasil";
+		paisesArray[1] = "China";
+		paisesArray[2] = "Inglaterra";
+		paisesArray[3] = "Alemanha";
+		paisesArray[4] = "Canada";
+		paisesArray[5] = "França";
+		paisesArray[6] = "Estados Unidos";
+
+		//paisesArray[5] = "Brasil";
+
+		for (i = 0; i < paisesArray.length; i++) {
+			document.write("Posição " + i + " do array: " + paisesArray[i]);
+			document.write("<br>");
+		}
+
+		var presidentesArray = [ "Marechal Deodoro da Fonseca",
+				"Marechal Floriano Peixoto",
+				"Prudente de Morais ",
+				"Campos Sales",
+				"Rodrigues Alves" ];
+		var y = presidentesArray.sort();
+		document.write(y);
+		document.write("<br>");
+
+		presidentesArray.push("Afonso Penna");
+		document.write(presidentesArray);
+		document.write("<br>");
+		
+		presidentesArray.pop();
+		document.write(presidentesArray);
+		document.write("<br>");
+		
+		document.write(presidentesArray.join("<br>"));
+		
+		
+	</script>
+	<h3>typeof presidentesArray * imprime objeto</h3>
+</body>
+</html>

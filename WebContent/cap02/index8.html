@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Formulario </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+	<h1>HTML Formulario</h1>
+	<h2>Inclua seus dados</h2>
+	<form id="myForm" action="index7a.html" method="get">		
+		<label>Nome:</label>
+		<input type="text" id="nome" name="nome"/> 	<br>
+		<label>Sobre Nome:</label>
+		<input type="text" id="sobrenome" name="sobrenome"/>  <br>
+		<label>Sexo:</label>
+		<input type="radio" id="sexo" name="sexo" value="M" checked="" />Masculino
+		<input type="radio" id="sexo" name="sexo" value="F"/>Feminino 	<br>
+		<label>Lazer:</label>
+		<input type="checkbox" id="lazer" name="leitura" value="leitura"  />Leitura
+		<input type="checkbox" id="lazer" name="games" value="games"/>Games
+		<input type="checkbox" id="lazer" name="esporte" value="esporte" checked=""/>Esporte <br>
+		<label>Possui Carro:</label>
+		<select name="Carro">
+			<option value="particular">Particular</option>
+			<option value="empresa">Empresa</option>
+			<option value="naoPossui">Não possui</option>
+			<option value="outro">Outra</option>
+		</select>
+		<br>
+		<input type="submit" value="Próxima Página"/>
+		<button onclick="mostra()">Envia</button>
+	</form>
+</body>
+</html>

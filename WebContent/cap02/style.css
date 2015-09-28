@@ -1,0 +1,27 @@
+/*folha de estilo*/
+body {
+	background-color:gray;
+	font-family: verdana;
+	color: red;
+}
+
+h2 {
+	background-color:red;
+	color: rgb(255,255,162); 
+}
+
+h3 {
+	background-color:purple;
+	color: white;
+
+}
+
+h4 {
+	background-color:green;
+	color: white;
+}
+
+p {
+	text-align: justify;
+	border: groove;
+}

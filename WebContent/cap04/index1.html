@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplos JavaScripts</title>
+</head>
+<body>
+	<h1>Variáveis</h1>
+	<script type="text/javascript">
+		//Este é um comentário de uma linha 
+
+		/* 
+		  Este comentário pode se expandir 
+		  por várias linhas. 
+		  As que quiser
+		 */
+
+		// Declaração
+		var parcela1 = 23;
+		var parcela2 = 33;
+		var soma = parcela1 + parcela2;
+		var x = 10;
+		var nome = "professor";
+
+		/* Nomes Válidos
+			Idade; 
+			PaisDeNascimento; 
+			_nome; 
+		 */
+
+		// Escopo
+		var numero = 2;
+		function minhaFuncao() {
+			var numero = 19;
+			document.write(numero); //imprime 19 
+		}
+
+		// atenção **********
+		document.write(numero); //imprime 2 
+		document.write("<br>")
+
+		//chamamos a funcao 
+		minhaFuncao(); //imprime 19 
+		document.write("<br>");
+		document.write(numero); //imprime 19
+	</script>
+
+	<h1>Tipo de dados</h1>
+	<script type="text/javascript">
+		//Cadeia de Caracteres
+		var meuTexto = "Miguel vai pescar";
+		var meuTexto = meuTexto + '23%%$ Letras & *--*';
+		document.write(meuTexto); // imprime Miguel vai pescar23%%$ Letras & *--* 
+		document.write("<br>")
+
+		// numero
+		var parcela1 = 23;
+		var parcela2 = 33;
+		var soma = parcela1 + parcela2;
+		document.write(soma); // imprime 56
+		document.write("<br>")
+
+		// numero + String
+		parcela1 = 23;
+		parcela2 = "33";
+		var soma1 = parcela1 + parcela2;
+		document.write(soma1); // imprime 2333
+		document.write("<br>")
+
+		// Booleano
+		var revisado = true;
+		if (revisado)
+			document.write("Revisado Ativo")
+		document.write("<br>")
+
+		var revisado = false;
+		if (!revisado)
+			document.write("Revisado NÃO Ativo")
+		document.write("<br>")
+	</script>
+
+	<h1>Undefined type</h1>
+	<script type="text/javascript">
+		var y;
+		if (y == undefined) {
+			document.write("A variavel x tem o tipo inefinido <br/>");
+		}
+		document.write(y);
+	</script>
+
+	<h1>Arrays</h1>
+	<script type="text/javascript">
+		var meuArray = new Array(4)
+
+		meuArray[0] = "www.http://inf.pucrs.br"
+		meuArray[1] = 1275
+		meuArray[2] = 0.78
+		meuArray[3] = true
+
+		for (i = 0; i < 4; i++) {
+			document.write("Posição " + i + " do array: " + meuArray[i])
+			document.write("<br>")
+		}
+	</script>
+</body>
+</html>

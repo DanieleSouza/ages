@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Formulario</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="script.js" language="javascript" type="text/javascript"></script>
+</head>
+<body>
+	<h1>HTML Formulario</h1>
+	<form id="myForm" action="resposta.html" method="get" onSubmit="return validaCampos()">
+		<fieldset>
+			<legend>Dados Cadastrais</legend>
+			<table border="1" cellspacing="0" cellpadding="2">
+				<tr>
+					<td><label>Nome:<span class="red">*</span></label></td>
+					<td><input type="text" id="nome" name="nome" /></td>
+				</tr>
+				<tr>
+					<td><label>Sobre Nome: <span class="red">*</span></label></td>
+					<td><input type="text" id="sobrenome" name="sobrenome" /></td>
+				</tr>
+				<tr>
+					<td><label>E-Mail: <span class="red">*</span></label></td>
+					<td><input type="text" id="email" name="email" required 
+					     x-moz-errormessage="Ops. Não esqueça de preencher este campo." /></td>
+				</tr>
+				<tr>
+					<td><label>Sexo:</label></td>
+					<td><input type="radio" id="sexo" name="sexo" value="M" checked="" />Masculino 
+					     <input type="radio" id="sexo" name="sexo" value="F" />Feminino</td>
+				</tr>
+				<tr>
+					<td><label>Lazer:</label></td>
+					<td><input type="checkbox" id="lazer" name="lazer" value="leitura" />Leitura 
+					   <input type="checkbox" id="lazer" name="lazer1" value="games" />Games <input
+						type="checkbox" id="lazer" name="lazer2" value="esporte" checked="" />Esporte</td>
+				</tr>
+				<tr>
+					<td><label>Possui Carro:</label></td>
+					<td><select name="Carro">
+							<option value="particular">Particular</option>
+							<option value="empresa">Empresa</option>
+							<option value="naoPossui">Não possui</option>
+							<option value="outro">Outra</option>
+					</select></td>
+				</tr>
+			</table>
+			<input class="botao" type="submit" value="Próxima Página" /> <sup class="aviso"> 
+			* campos obrigatórios</sup>
+			<div class="divErros" id="divErros"></div>
+		</fieldset>
+	</form>
+</body>
+</html>

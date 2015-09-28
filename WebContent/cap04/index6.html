@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Integração DOM</title>
+</head>
+<body>
+	<table id="tabela" border="2">
+		<caption>Presidentes Brasil</caption>
+		<tr>
+			<th></th>
+			<th>Presidente</th>
+			<th>Ano Inicio</th>
+			<th>Ano Fim</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Dilma Rousseff</td>
+			<td>2011</td>
+			<td>2018</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Lula</td>
+			<td>2003</td>
+			<td>2010</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>FHC</td>
+			<td>1995</td>
+			<td>2002</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Itamar Franco</td>
+			<td>1992</td>
+			<td>1995</td>
+		</tr>
+	</table>
+	<label>Selecione a linha da tabela</label>
+	<input id="linha" value="0" />
+	<button onclick="linha()">Click</button>
+	<button onclick="muda()">Muda Tabela</button>
+
+	<p id="demo" style="background-color: black; color: white;"></p>
+
+	<script>
+		function linha() {
+			var linha = document.getElementById("linha").value;
+			var x = document.getElementById("tabela");
+			var y = x.getElementsByTagName("tr");
+			document.getElementById("demo").innerHTML = ':LINHA: '
+					+ y[linha].innerHTML;
+		}
+		function muda() {
+			document.getElementById("tabela").style.color = "blue";
+			document.getElementById("tabela").style.fontFamily = "Arial";
+			document.getElementById("tabela").style.fontSize = "larger";
+			document.getElementById("tabela").style.backgroundColor = "white";
+		}
+	</script>
+</body>
+</html>

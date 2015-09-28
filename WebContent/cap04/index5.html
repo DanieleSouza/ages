@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Ternário </title>
+	<script>
+		function voto() {
+			var idade, sou;
+			idade = document.getElementById("idade").value;
+			sou = (idade < 18) ? "você é novo não" : "você é velho pode";
+			document.getElementById("demo").innerHTML = sou + " votar.";
+		}
+	
+		function cor() {
+			var cores = [];
+			var els = document.getElementsByName('cor');
+			for (var i=0;i<els.length;i++){
+			  if ( els[i].checked ) {
+			    cores.push(els[i].value);
+			  }
+			}
+			switch (cores[0]) {
+			case "v":
+			document.getElementById("demo").innerHTML = " Você torce pelo Internacional";
+				break;
+			case "a":
+				document.getElementById("demo").innerHTML = " Você torce pelo Gremio";
+				break;
+			case "p":
+				document.getElementById("demo").innerHTML = " Você torce pelo Corintias";
+				break;
+			}
+		}
+	
+		function rede() {
+			var text = "";
+		
+			var redes= [];
+			var els = document.getElementsByName('rede');
+			for (var i=0;i<els.length;i++){
+			  if ( els[i].checked ) {
+			    redes.push(els[i].value);
+			  }
+			}
+			
+			var i = 0;
+			while (redes[i]) {
+				text += redes[i] + "<br>";
+				i++;
+			}
+			
+			document.getElementById("demo").innerHTML = text;
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>Operações</h1>
+	<label>Qual sua idade</label>	
+	<input id="idade" value="18" />
+	<button onclick="voto()">Click</button>
+	
+	<label>Escolha sua Cor</label>
+	<input type="radio" id="cor" name="cor" value="v" onclick="cor()"/>Vermelho
+	<input type="radio" id="cor" name="cor" value="a" onclick="cor()"/>Azul
+	<input type="radio" id="cor" name="cor" value="p" onclick="cor()"/>Preto
+	
+	<label>Quais redes socias voce tem</label>
+	<input type="checkbox" id="rede" name="rede" value="facebook" onclick="rede()"/>Facebook
+	<input type="checkbox" id="rede" name="rede" value="google" onclick="rede()"/>Google
+	<input type="checkbox" id="rede" name="rede" value="twitter" onclick="rede()"/>Twitter
+	<input type="checkbox" id="rede" name="rede" value="linkedin" onclick="rede()"/>Linkedin
+	
+	
+	
+	<p id="demo"></p>
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Arquivos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="script.js" type="text/javascript"></script>
+<script type='text/javascript'>
+	//<![CDATA[ 
+	window.onload = function() {
+	}//]]>
+</script>
+
+</head>
+<body>
+	<script>
+		var leitorDeCSV = new FileReader();
+
+		window.onload = function init() {
+			leitorDeCSV.onload = leCSV;
+		}
+
+		function pegaCSV(inputFile) {
+			var file = inputFile.files[0];
+			leitorDeCSV.readAsText(file);
+		}
+
+		function leCSV(evt) {
+
+			var fileArr = evt.target.result.split('\n');
+			var strDiv = '<table>';
+
+			for (var i = 0; i < fileArr.length; i++) {
+				strDiv += '<tr>';
+				var fileLine = fileArr[i].split(',');
+				for (var j = 0; j < fileLine.length; j++) {
+					strDiv += '<td>' + fileLine[j].trim() + '</td>';
+				}
+				strDiv += '</tr>';
+			}
+
+			strDiv += '</table>';
+
+			var CSVsaida = document.getElementById('CSVsaida');
+			CSVsaida.innerHTML = strDiv;
+		}
+	</script>
+</head>
+<input type="file" id="inputCSV" onchange="pegaCSV(this)">
+<div id="CSVsaida"></div>
+
+<input id="inputFile" type="file" onchange="pegarArquivo(this)" />
+<p id="atributos"></p>
+
+<input id="inputImage" type="file" onchange="pegarImagem(this)" />
+<div id="imgLocal"></div>
+
+</body>
+</html>

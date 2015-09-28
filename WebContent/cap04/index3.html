@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplo Incrementos</title>
+<script type="text/javascript">
+	function incrimento() {
+		var z = 100001;
+		for (var x = 0; x < z; x++) {
+			document.getElementById("demox").innerHTML = x;
+		}
+		for (var y = z; y > 0; y--) {
+			document.getElementById("demoy").innerHTML = y;
+		}
+	}
+</script>
+</head>
+<body>
+<h1>Exemplo Incrementos</h1>
+	<input type="button" onclick="incrimento()" value="Clik" />
+	<p id="demox">Resultado X</p>
+	<p id="demoy">Resultado Y</p>
+
+
+
+</body>
+</html>

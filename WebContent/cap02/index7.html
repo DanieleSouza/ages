@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Formulario com JavaScript</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+	<form id="myForm" action="index7a.html" method="get">
+		<h1>HTML Formulario com JavaScript</h1>
+		<h2>Inclua seus dados</h2>
+		<label>Nome:</label>
+		<input type="text" id="nome" name="nome"/>
+		<br>
+		<label>Sobre Nome:</label>
+		<input type="text" id="sobrenome" name="sobrenome"/>
+		<br>
+		<input type="submit" value="Próxima Página"/>
+		<button onclick="mostra()">Envia</button>
+	</form>
+</body>
+</html>
+
+<!-- 
+	Dentro do corpo de um HTML, podemos criar formularios.
+	Para isso devomos utilizar a tag <form> ela determina 
+	os limites dentro de um formulario. Assim como outras
+	tags ela tem atributos, e algumas tags que  funcionam
+	dentro dela, tais como:
+	<input>  server para determinar a entrada de dados do
+		formulário, tambem  podemos pelos seus atributos 
+		definir o tipo de entrada e formato do dado;
+	<button> botão de ação.
+-->

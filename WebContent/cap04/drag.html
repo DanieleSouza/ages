@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=620">
+<title>HTML5 Demo: File API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script src="script.js" type="text/javascript"></script>
+<style>
+#holder {
+	border: 10px dashed #ccc;
+	width: 300px;
+	height: 300px;
+	margin: 20px auto;
+}
+
+#holder.hover {
+	border: 10px dashed #333;
+}
+</style>
+</head>
+<body>
+	<section id="wrapper">
+		<div id="carbonads-container">
+			
+		</div>
+		<header>
+			<h1>File API</h1>
+		</header>
+
+
+		<article>
+			<div id="holder"></div>
+			<p id="status">File API & FileReader API not supported</p>
+			<p>Drag an image from your desktop on to the drop zone above to see the browser read the contents of the file and use it as the background - without
+				uploading the file to any servers.</p>
+		</article>
+		<script>
+			var holder = document.getElementById('holder'), state = document
+					.getElementById('status');
+
+			if (typeof window.FileReader === 'undefined') {
+				state.className = 'fail';
+			} else {
+				state.className = 'success';
+				state.innerHTML = 'File API & FileReader available';
+			}
+
+			holder.ondragover = function() {
+				this.className = 'hover';
+				return false;
+			};
+			holder.ondragend = function() {
+				this.className = '';
+				return false;
+			};
+			holder.ondrop = function(e) {
+				this.className = '';
+				e.preventDefault();
+
+				var file = e.dataTransfer.files[0], reader = new FileReader();
+				reader.onload = function(event) {
+					console.log(event.target);
+					holder.style.background = 'url(' + event.target.result
+							+ ') no-repeat center';
+				};
+				console.log(file);
+				reader.readAsDataURL(file);
+
+				return false;
+			};
+		</script>
+		<a id="html5badge" href="http://www.w3.org/html/logo/"> <img
+			src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-device-graphics-multimedia-performance-semantics-storage.png" width="325" height="64"
+			alt="HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D & Effects, Multimedia, Performance & Integration, Semantics, and Offline & Storage"
+			title="HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D & Effects, Multimedia, Performance & Integration, Semantics, and Offline & Storage">
+		</a>
+		<footer>
+			<a href="/">HTML5 demos</a>/<a id="built" href="http://twitter.com/rem">@rem built this</a>/<a href="#view-source">view source</a>
+		</footer>
+	</section>
+	<a href="http://github.com/remy/html5demos"><img style="position: absolute; top: 0; left: 0; border: 0;"
+		src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+</body>
+</html>

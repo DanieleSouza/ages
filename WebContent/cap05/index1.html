@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Cadastro Usuario</title>
+</head>
+<body>
+<form action="cadastra" method="post">
+		<h1> Cadastro de Usuarios 	</h1>  
+         <p>
+         	<label>Nome: </label>
+         	<input type="text" name="nome"/> <br>
+			<label>RG: </label>
+			<input type="text" name="rg"/> <br>
+			<label>CPF: </label>
+			<input type="text" name="cpf"/> <br>
+			<label>Salario: </label>
+			<input type="text" name="salario"/> <br>
+			<label>Data Nascimento: </label>
+			<input type="text" name="dataNasc"/> <br>
+			<label>E-mail: </label>
+			<input type="text" name="email"/> <br>
+         </p>
+		<input type="submit" title="Enviar" value="Enviar"/>
+		<input type="reset" title="Cancelar" value="Cancelar"/>
+	</form>
+
+	<h1>Exemplo Upload</h1>
+
+	<form method="post" action="upload" enctype="multipart/form-data" >
+            <label>File:</label>
+            <input type="file" name="file" id="file" /> <br/>
+            <label>Destination:</label>
+            <input type="text" value="c:\temp\" name="destination"/>
+            <br>
+            <input type="submit" value="Upload" name="upload" id="upload" />
+        </form>
+</body>
+</html>
